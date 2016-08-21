@@ -50,11 +50,14 @@
     ready:function () {
       var that = this;
       if(that.$parent.message !== ''){
-      $.ajax({
+      ajax({
         headers: {
-          "apikey": "2ff8a937112606bdb6b2f56dcc509900",
+          "apikey": "2ff8a937112606bdb6b2f56dcc509900"
         },
-        url: "http://apis.baidu.com/apistore/weatherservice/weather?citypinyin=" + that.$parent.message,
+        data:{
+          'citypinyin':that.$parent.message
+        },
+        url: "http://apis.baidu.com/apistore/weatherservice/weather",
         success: function (data) {
           var errNum = JSON.parse(data).errNum;
           if(errNum !== 0){
@@ -81,11 +84,11 @@
 </script>
 <style>
   .weather{
-    margin-top: 100px;
+    margin-top: 50px;
   }
   .mask{
-    width:1120px;
-    height: 500px;
+    width:1110px;
+    height: 805px;
     position: absolute;
     background-color: #B4DAC4;
     top:0px;

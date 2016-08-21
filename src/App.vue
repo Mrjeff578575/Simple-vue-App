@@ -3,12 +3,12 @@
     <nav class="navbar navbar-default">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <i class="fa fa-cloud fa">Weather</i>
+          <i class="fa fa-cloud fa">阿俊天气</i>
         </a>
         <ul class="nav navbar-nav" my-message = msg>
-          <li><a v-link = "'/Home'">Home</a></li>
-          <li><a v-link = "'/weather'">Weather</a></li>
-          <li><a v-link = "'/beijing'">Beijing</a></li>
+          <li><a v-link = "'/Home'">主页</a></li>
+          <li><a v-link = "'/weather'">天气信息</a></li>
+          <li><a v-link = "'/citylist'">添加你的常用城市</a></li>
         </ul>
       </div>
     </nav>
@@ -23,8 +23,8 @@
   .background{
     margin-top:-20px;
     width: 100%;
-    height: 920px;
-    background-image: url('bg.jpg');
+    height: 900px;
+    background-image: url('assets/bg.jpg');
   }
 </style>
 <script>

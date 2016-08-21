@@ -4,6 +4,8 @@ import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import home from './components/Home.vue'
 import weather from './components/Weather.vue'
+import citylist from './components/citylist.vue'
+import createWeather from './components/createWeather'
 
 /* eslint-disable no-new */
 
@@ -17,6 +19,14 @@ router.map({
   },
   '/weather': {
     component: weather
+  },
+  '/citylist': {
+  	component: citylist,
+  	subRoutes: {
+  		'/createWeather': {
+  			component:createWeather
+  		}
+  	}
   }
 })
 router.redirect({

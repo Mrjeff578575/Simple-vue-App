@@ -1,14 +1,14 @@
 <template>
   <div class="home">
     <div class="col-sm-12 input-group input-group-lg">
-      <input type="text" class="form-control" placeholder="Plase input CityName" aria-describedby="sizing-addon1" v-model = 'message'>
+      <input type="text" class="form-control" placeholder="请输入城市拼音" aria-describedby="sizing-addon1" v-model = 'message'>
       <span class="input-group-addon" id="sizing-addon1">
         <a v-link= "'/weather'" v-on:click="search"><i class="fa fa-search fa-1x"></i></a>
       </span>
     </div>
   </div>
     <div class="jumbotron col-sm-12">
-      <h1>Welcome Weather Search</h1>
+      <h1>欢迎来到天气查询</h1>
       <p>this is a simple website product by vue.js</p>
       <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
     </div>
