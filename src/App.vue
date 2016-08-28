@@ -1,4 +1,5 @@
 <template>
+<div class="Header">
   <div class="header">
     <nav class="navbar navbar-default">
       <div class="container">
@@ -18,6 +19,7 @@
       <router-view></router-view>
     </div>
   </div>
+</div>
 </template>
 <style>
   .background{

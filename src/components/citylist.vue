@@ -1,5 +1,4 @@
 <template>
-	<router-view></router-view>
 	<div class="container">
 		<div class="col-sm-2"><button 
 			class="btn btn-primary btn-lg create" 
@@ -9,12 +8,13 @@
 		<div class="col-sm-8">
 			<ul class="list-group">
 				<li class="list-group-item" v-for='Weather in Weathers'>
-					<span class="info">{{Weather.city.name}}&nbsp;&nbsp;{{Weather.city.condition}}&nbsp;&nbsp;&nbsp;{{Weather.city.temp}}</span>
+					<span class="info">{{Weather.city.name}}&nbsp;&nbsp;{{Weather.city.condition}}&nbsp;&nbsp;&nbsp;{{Weather.city.temp}}&#8451</span>
 					<button class="btn btn-danger btn-lg delete" @click='deleteWeather(Weather)'>X</button>
 				</li>
 			</ul>
 		</div>
 	</div>
+	<router-view></router-view>
 </template>
 <style>
 	.create{
@@ -63,13 +63,14 @@
         			"apikey": "2ff8a937112606bdb6b2f56dcc509900"
        			 },
         	data:{
-          		'citypinyin':'chengdu'
+          		'cityname':'成都'
         	},
-        	url: "http://apis.baidu.com/apistore/weatherservice/weather",
+        	url: "http://apis.baidu.com/apistore/weatherservice/cityname",
         	success: function (data) {
           	var errNum = JSON.parse(data).errNum;
           	if(errNum !== 0){
             	alert("城市名称错误,请重新输入");
+
           	}
           	var r = JSON.parse(data).retData;
           	that.Weathers[0].city.name = r.city;

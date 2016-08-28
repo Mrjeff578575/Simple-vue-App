@@ -55,9 +55,9 @@
           "apikey": "2ff8a937112606bdb6b2f56dcc509900"
         },
         data:{
-          'citypinyin':that.$parent.message
+          'cityname':that.$parent.message
         },
-        url: "http://apis.baidu.com/apistore/weatherservice/weather",
+        url: "http://apis.baidu.com/apistore/weatherservice/cityname",
         success: function (data) {
           var errNum = JSON.parse(data).errNum;
           if(errNum !== 0){
